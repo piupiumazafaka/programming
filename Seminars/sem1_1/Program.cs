@@ -20,3 +20,16 @@
 //     System.Console.Write(start + " ");
 //     start++;
 // }
+
+System.Console.WriteLine("Input three-digit number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num >= 100 && num <= 999) //456
+{
+    int ed = num % 10; // вывод остатка от деления (отделяем единицы) = здесь хранится 6
+    int sot = num % 100; // целочисленное деление (отделение сотни) = здесь хранится 4
+    System.Console.WriteLine($"{num} -> {ed + sot}");
+}
+else 
+{
+    System.Console.WriteLine("You have input not three-digit number");
+}
